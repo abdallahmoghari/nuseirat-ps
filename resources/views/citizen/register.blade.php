@@ -63,7 +63,7 @@
 document.getElementById('registerForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-    axios.post('{{ route("citizen.register") }}', formData).then(function(response) {
+    axios.post('{{ route("citizen.register.submit") }}', formData).then(function(response) {
         Swal.fire({icon:'success',title:response.data.title}).then(()=>{
             window.location.href='{{ route("citizen.services") }}';
         });

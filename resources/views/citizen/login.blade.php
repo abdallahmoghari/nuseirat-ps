@@ -37,7 +37,7 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var formData = new FormData(this);
-    axios.post('{{ route("citizen.login") }}', formData).then(function(response) {
+    axios.post('{{ route("citizen.login.submit") }}', formData).then(function(response) {
         Swal.fire({icon:'success',title:response.data.title}).then(()=>{
             window.location.href='{{ route("citizen.services") }}';
         });

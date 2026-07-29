@@ -76,9 +76,9 @@ Route::prefix('cms/admin/')->middleware('auth:admin,author')->group(function () 
 // --- Citizen Frontend Routes ---
 Route::prefix('citizen')->group(function () {
     Route::get('register', [App\Http\Controllers\CitizenAuthController::class, 'showRegister'])->name('citizen.register');
-    Route::post('register', [App\Http\Controllers\CitizenAuthController::class, 'register'])->name('citizen.register');
+    Route::post('register', [App\Http\Controllers\CitizenAuthController::class, 'register'])->name('citizen.register.submit');
     Route::get('login', [App\Http\Controllers\CitizenAuthController::class, 'showLogin'])->name('citizen.login');
-    Route::post('login', [App\Http\Controllers\CitizenAuthController::class, 'login'])->name('citizen.login');
+    Route::post('login', [App\Http\Controllers\CitizenAuthController::class, 'login'])->name('citizen.login.submit');
     Route::get('logout', [App\Http\Controllers\CitizenAuthController::class, 'logout'])->name('citizen.logout');
 
     Route::middleware('auth:citizen')->group(function () {
