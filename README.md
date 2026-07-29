@@ -2,6 +2,9 @@
 
 نظام ويب متكامل لبلدية النصيرات في قطاع غزة، يهدف إلى رقمنة الخدمات البلدية وتوفير منصة إخبارية وإدارية متكاملة. مبني باستخدام **Laravel 12** مع نظام صلاحيات متقدم.
 
+🔗 **الموقع المباشر:** [abdallamoghari.alwaysdata.net](https://abdallamoghari.alwaysdata.net)
+🔗 **المستودع:** [github.com/abdallahmoghari/nuseirat-ps](https://github.com/abdallahmoghari/nuseirat-ps)
+
 ---
 
 ## 🚀 المميزات
