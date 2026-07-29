@@ -31,7 +31,7 @@
 document.getElementById('loginForm').addEventListener('submit', function(e) {
     e.preventDefault();
     var fd = new FormData(this);
-    axios.post('{{ route("service-employee.login") }}', fd).then(function(r) {
+    axios.post('{{ route("service-employee.login.submit") }}', fd).then(function(r) {
         Swal.fire({icon:'success',title:r.data.title}).then(()=>{
             window.location.href='{{ route("service-employee.dashboard") }}';
         });

@@ -96,7 +96,7 @@ Route::prefix('citizen')->group(function () {
 // --- Service Employee Routes (CMS-style) ---
 Route::prefix('cms/service-employee/')->middleware('guest:service_employee')->group(function () {
     Route::get('login', [App\Http\Controllers\ServiceEmployeeAuthController::class, 'showLogin'])->name('service-employee.login');
-    Route::post('login', [App\Http\Controllers\ServiceEmployeeAuthController::class, 'login'])->name('service-employee.login');
+    Route::post('login', [App\Http\Controllers\ServiceEmployeeAuthController::class, 'login'])->name('service-employee.login.submit');
 });
 
 Route::prefix('cms/service-employee/')->middleware('auth:service_employee')->group(function () {
